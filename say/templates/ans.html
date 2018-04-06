@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <meta charset="utf-8">
+    {% block head %}
+      <title>Base Page</title>
+    {% endblock %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'seat.css'%}" type = "text/css">
+    <link rel="stylesheet" href="{% static 'white.css'%}" type = "text/css">
+    <link rel="stylesheet" href="{% static 'prism.css'%}" type = "text/css">
+
+
+
+
+     <nav>
+    <div class="nav-wrapper container">
+      <a href="/" class="brand-logo center">Sentiment Analysis</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      </ul>
+    </div>
+  </nav>
+  </head>
+
+  <body>
+    {% block body %}
+
+      <div class="row " style="height:150px;"></div>
+      <div class="row ">
+        <div class=" col s8 offset-s2 ">
+          <div class="card center-align">
+            <div class="card-content">
+              <span class="card-title"> <p class="flow-text">The given sentence is <b> {{ answer }} </b></p></span>
+              <button class="btn blue btn-large waves-effect waves-dark center-align" type="submit" name="action" onclick="location.href='{% url 'ask' %}'">
+                <b>Enter Another Sentence</b><i class="material-icons left">arrow_back</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    {% endblock %}
+    <!-- jQuery is required by Materialize to function -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  </body>
+
+
+</html>
