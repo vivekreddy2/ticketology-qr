@@ -69,7 +69,7 @@ TEMPLATES = [
         },
     },
 ]
-ALLOWED_HOSTS = [‘0.0.0.0’, ‘localhost’, ‘ticketologyqr.herokuapp.com’]
+ALLOWED_HOSTS = [‘0.0.0.0’, 'localhost', 'ticketologyqr.herokuapp.com', 'ticketology-boarding.herokuapp.com', ]
 WSGI_APPLICATION = 'sentiment.wsgi.application'
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
